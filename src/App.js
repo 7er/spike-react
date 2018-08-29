@@ -6,7 +6,7 @@ import './App.css';
 import VisibleTodoList from './containers/VisibleTodoList'
 
 
-class App extends Component {
+export class App extends Component {
   render() {
     return (
         <VisibleTodoList />
