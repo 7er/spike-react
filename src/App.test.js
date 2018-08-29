@@ -1,4 +1,5 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
@@ -31,4 +32,11 @@ it('renders without crashing', () => {
     const div = document.createElement('div');
     ReactDOM.render(<Provider store={store}><App /></Provider>, div);
     ReactDOM.unmountComponentAtNode(div);
+});
+
+it('renders the TodoList correctly', () => {
+    const store = configStore();
+    const component = renderer.create(<Provider store={store}><App /></Provider>);
+    let tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
 });

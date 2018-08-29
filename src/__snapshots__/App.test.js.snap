@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the TodoList correctly 1`] = `
+<ul>
+  <li>
+    Learn about react
+     
+    completed
+  </li>
+  <li>
+    Learn about reducers
+     
+    completed
+  </li>
+</ul>
+`;
