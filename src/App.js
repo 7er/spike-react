@@ -17,15 +17,8 @@ import {
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+        <div className="App">
+        </div>
     );
   }
 }
@@ -38,16 +31,19 @@ const store = createStore(todoApp)
 
 
 // Log the initial state
-console.log(store.getState())
+console.log('Initial state', store.getState())
 
 // Every time the state changes, log it
 // Note that subscribe() returns a function for unregistering the listener
-const unsubscribe = store.subscribe(() =>
-  console.log(store.getState())
+const unsubscribe = store.subscribe(
+    () => console.log('on state change', store.getState())
 )
 
 // Dispatch some actions
-store.dispatch(addTodo('Learn about actions'))
+store.dispatch(
+    addTodo('Learn about actions')
+    //{type: 'ADD_TODO', text: 'Learn about actions'}
+)
 store.dispatch(addTodo('Learn about reducers'))
 store.dispatch(addTodo('Learn about store'))
 store.dispatch(toggleTodo(0))

@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux'
+// import { combineReducers } from 'redux'
 import {
     ADD_TODO,
     TOGGLE_TODO,
@@ -44,7 +44,7 @@ function todoApp(state = initialState, action) {
         return Object.assign(
             {},
             state,
-            {visbilityFilter: action.filter})
+            {visibilityFilter: action.filter})
     default:
         return state
     }
