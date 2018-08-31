@@ -3,14 +3,16 @@
 exports[`renders the TodoList correctly 1`] = `
 <ul>
   <li>
-    Learn about react
+    <strike>
+      Learn about react
+    </strike>
      
-    completed
   </li>
   <li>
-    Learn about reducers
+    <strike>
+      Learn about reducers
+    </strike>
      
-    completed
   </li>
 </ul>
 `;

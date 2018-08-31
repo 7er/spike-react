@@ -3,9 +3,11 @@ import PropTypes from 'prop-types'
 
 const TodoList = ({ todos, onTodoClick }) => (
   <ul>
-    {todos.map((todo, index) => (
-        <li key={index}>{ todo.text } {todo.completed ? 'completed' : 'not completed' }</li>
-    ))}
+    {todos.map((todo, index) => {
+      const strikeContent = (<strike>{todo.text}</strike>);
+      const liContent = todo.completed ? strikeContent : todo.text;
+      return <li key={index}>{ liContent } </li>;
+    })}
   </ul>
 )
 
