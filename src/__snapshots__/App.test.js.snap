@@ -1,18 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders the TodoList correctly 1`] = `
-<ul>
-  <li>
-    <strike>
-      Learn about react
-    </strike>
-     
-  </li>
-  <li>
-    <strike>
-      Learn about reducers
-    </strike>
-     
-  </li>
-</ul>
+<div>
+  <ul>
+    <li>
+      <strike>
+        Learn about react
+      </strike>
+       
+    </li>
+    <li>
+      <strike>
+        Learn about reducers
+      </strike>
+       
+    </li>
+  </ul>
+  <div>
+    <span>
+      Show: 
+    </span>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": "4px",
+        }
+      }
+    >
+      All
+    </button>
+    <button
+      disabled={false}
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": "4px",
+        }
+      }
+    >
+      Active
+    </button>
+    <button
+      disabled={true}
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": "4px",
+        }
+      }
+    >
+      Completed
+    </button>
+  </div>
+</div>
 `;
