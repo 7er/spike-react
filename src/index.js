@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
+import thunkMiddleware from 'redux-thunk'
 
 import './index.css';
-import App from './App';
+import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 import todoApp from './reducers'
 
@@ -16,7 +17,9 @@ import {
     VisibilityFilters
 } from './actions'
 
-const store = createStore(todoApp)
+const store = createStore(
+  todoApp,
+  applyMiddleware(thunkMiddleware))
 
 store.dispatch(addTodo('Learn about react'))
 store.dispatch(addTodo('Learn about reducers'))

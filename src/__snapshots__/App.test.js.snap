@@ -15,6 +15,12 @@ exports[`renders the TodoList correctly 1`] = `
       </strike>
        
     </li>
+    <li>
+      <strike>
+        Learn about redux
+      </strike>
+       
+    </li>
   </ul>
   <div>
     <span>
